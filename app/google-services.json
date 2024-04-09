@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "98817408056",
+    "project_id": "crms1-e8753",
+    "storage_bucket": "crms1-e8753.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98817408056:android:e3f7744005eda9de297acd",
+        "android_client_info": {
+          "package_name": "com.example.crms1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZ2aaiHg8DqgvUmZ_3uL5Cg0SnYa7fuyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
