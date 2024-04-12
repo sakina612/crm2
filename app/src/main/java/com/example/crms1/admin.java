@@ -40,13 +40,13 @@ public class admin extends AppCompatActivity implements View.OnClickListener{
         if (viewId == R.id.addstudentCard) {
             i = new Intent(this, addstudent.class);
         } else if (viewId == R.id.viewstudentCard) {
-            i = new Intent(this, viewstudent.class);
+            i = new Intent(this, ViewStudent.class);
         } else if (viewId == R.id.addcompanyCard) {
             i = new Intent(this, addcompany.class);
         } else if (viewId == R.id.viewcompaniesCard) {
             i = new Intent(this, viewcompanies.class);
         } else if (viewId == R.id.viewjobCard) {
-            i = new Intent(this, viewjob.class);
+            i = new Intent(this, ViewjobActivity.class);
         } else if (viewId == R.id.logoutCard) {
             i = new Intent(this, logout.class);
         } else {

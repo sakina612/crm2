@@ -34,6 +34,13 @@
                 android:textAlignment="center"
                 android:textColor="@color/purple_700"/>
 
+            <ImageView
+                android:id="@+id/imagec"
+                android:layout_width="192dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_add_a_photo_24"
+                tools:ignore="ContentDescription" />
 
             <EditText
                 android:layout_width="match_parent"
