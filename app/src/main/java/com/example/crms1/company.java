@@ -40,9 +40,9 @@ public class company extends AppCompatActivity implements View.OnClickListener{
         } else if (viewId == R.id.addjobCard) {
             i = new Intent(this, addjob.class);
         } else if (viewId == R.id.viewjobCard) {
-            i = new Intent(this, viewjob.class);
+            i = new Intent(this, Viewjob2Activity.class);
         } else if (viewId == R.id.viewstudentCard) {
-            i = new Intent(this, viewstudent.class);
+            i = new Intent(this, ViewStudent.class);
         } else if (viewId == R.id.logoutCard) {
             i = new Intent(this, logout.class);
         } else {

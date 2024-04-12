@@ -29,7 +29,7 @@ public class addstudent extends AppCompatActivity {
     ValueEventListener eventListener;
     RecyclerView recyclerView;
     List<DataClass> dataList;
-    MyAdapter adapter;
+  //  MyAdapter adapter;
     SearchView searchView;
 
     @SuppressLint("MissingInflatedId")
@@ -41,7 +41,7 @@ public class addstudent extends AppCompatActivity {
         fab =(FloatingActionButton) findViewById(R.id.addButton);
         recyclerView = findViewById(R.id.recyclerView);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(addstudent.this, 1);
+      /*  GridLayoutManager gridLayoutManager = new GridLayoutManager(addstudent.this, 1);
         recyclerView.setLayoutManager(gridLayoutManager);
         AlertDialog.Builder builder = new AlertDialog.Builder(addstudent.this);
         builder.setCancelable(false);
@@ -70,7 +70,7 @@ public class addstudent extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
                 dialog.dismiss();
             }
-        });
+        }); */
 
         fab.setOnClickListener(new View.OnClickListener() {
 

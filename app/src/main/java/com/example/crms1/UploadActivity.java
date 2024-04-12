@@ -1,5 +1,4 @@
 package com.example.crms1;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -21,6 +20,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -34,6 +34,8 @@ public class UploadActivity extends AppCompatActivity {
     EditText uploadTopic, uploadDesc, uploadLang;
     String imageURL;
     Uri uri;
+    FirebaseDatabase database;
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +46,31 @@ public class UploadActivity extends AppCompatActivity {
         uploadTopic = findViewById(R.id.uploadTopic);
         uploadLang = findViewById(R.id.uploadLang);
         saveButton = findViewById(R.id.saveButton);
-        ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                database = FirebaseDatabase.getInstance();
+                reference = database.getReference("new Job");
+
+                String company_name = uploadTopic.getText().toString();
+                String description = uploadDesc.getText().toString();
+                String language = uploadLang.getText().toString();
+
+
+                HelperClass2 helperClass = new HelperClass2(company_name, description, language);
+                reference.child(company_name).setValue(helperClass);
+
+                Toast.makeText(UploadActivity.this, "Job is set!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(UploadActivity.this, company.class);
+                startActivity(intent);
+            }
+        });
+
+
+    }
+}
+    /*    ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
                     @Override
@@ -113,5 +139,6 @@ public class UploadActivity extends AppCompatActivity {
                         Toast.makeText(UploadActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
-    }
-}
+    } */
+
+

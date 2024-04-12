@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ViewjobActivity">
+    android:layout_height="match_parent">
 
     <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"
@@ -21,25 +20,28 @@
         app:searchIcon="@drawable/baseline_search_24"
         android:background="@drawable/lavender_border"/>
 
- <!--   <androidx.recyclerview.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/search"
+        android:layout_marginTop="0dp"
         android:scrollbars="vertical"
         tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="149dp" /> -->
+        tools:layout_editor_absoluteY="149dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="315dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="41dp"
         android:backgroundTint="@color/purple_700"
         android:contentDescription="TODO"
         android:src="@drawable/baseline_add_24"
@@ -47,5 +49,6 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="319dp"
         tools:layout_editor_absoluteY="564dp" />
+
 
 </RelativeLayout>

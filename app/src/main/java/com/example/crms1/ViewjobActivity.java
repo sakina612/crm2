@@ -2,53 +2,48 @@ package com.example.crms1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
+
 import androidx.appcompat.widget.SearchView;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.View;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import java.util.ArrayList;
+
 import java.util.List;
 
-public class viewstudent extends AppCompatActivity {
+public class ViewjobActivity extends AppCompatActivity {
 
     FloatingActionButton fab;
     DatabaseReference databaseReference;
     ValueEventListener eventListener;
     RecyclerView recyclerView;
     List<DataClass> dataList;
-    MyAdapter adapter;
+    //MyAdapter adapter;
     SearchView searchView;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_viewstudent);
+        setContentView(R.layout.activity_viewjob);
 
         fab =(FloatingActionButton) findViewById(R.id.addButton);
         recyclerView = findViewById(R.id.recyclerView);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(viewstudent.this, 1);
+     /*   GridLayoutManager gridLayoutManager = new GridLayoutManager(viewjob.this, 1);
         recyclerView.setLayoutManager(gridLayoutManager);
-        AlertDialog.Builder builder = new AlertDialog.Builder(viewstudent.this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(viewjob.this);
         builder.setCancelable(false);
         builder.setView(R.layout.progress_layout);
         AlertDialog dialog = builder.create();
         dialog.show();
 
         dataList = new ArrayList<>();
-        adapter = new MyAdapter(viewstudent.this, dataList);
+        adapter = new MyAdapter(viewjob.this, dataList);
         recyclerView.setAdapter(adapter);
         databaseReference = FirebaseDatabase.getInstance().getReference("Android Tutorials");
         dialog.show();
@@ -68,15 +63,16 @@ public class viewstudent extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
                 dialog.dismiss();
             }
-        });
+        }); */
 
         fab.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(viewstudent.this, UploadActivity.class);
+                Intent intent = new Intent(ViewjobActivity.this, addjob.class);
                 startActivity(intent);
             }
         });
+
     }
 }

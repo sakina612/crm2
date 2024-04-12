@@ -35,7 +35,7 @@ public class student extends AppCompatActivity implements View.OnClickListener{
         if (viewId == R.id.viewprofileCard) {
             i = new Intent(this, viewprofile.class);
         } else if (viewId == R.id.viewjobCard) {
-            i = new Intent(this, viewjob.class);
+            i = new Intent(this, ViewStudent.class);
         } else if (viewId == R.id.logoutCard) {
             i = new Intent(this, logout.class);
         } else {
