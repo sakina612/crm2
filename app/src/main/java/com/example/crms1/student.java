@@ -24,6 +24,7 @@ public class student extends AppCompatActivity implements View.OnClickListener{
         card2.setOnClickListener(this);
         card3.setOnClickListener(this);
 
+
     }
 
     @Override
@@ -37,7 +38,7 @@ public class student extends AppCompatActivity implements View.OnClickListener{
         } else if (viewId == R.id.viewjobCard) {
             i = new Intent(this, ViewStudent.class);
         } else if (viewId == R.id.logoutCard) {
-            i = new Intent(this, logout.class);
+            i = new Intent(this,MainActivity.class);
         } else {
             return; // Do nothing if the clicked view does not match any case
         }

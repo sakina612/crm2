@@ -51,8 +51,8 @@ public class HelperClass {
         this.email = email;
         this.username = username;
         this.password = password;
-      //  this.cgpa= this.cgpa;
-       // this.address= this.address;
+     //   this.cgpa= this.cgpa;
+      //  this.address= this.address;
     }
 
     public HelperClass() {

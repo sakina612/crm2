@@ -44,7 +44,9 @@ public class company extends AppCompatActivity implements View.OnClickListener{
         } else if (viewId == R.id.viewstudentCard) {
             i = new Intent(this, ViewStudent.class);
         } else if (viewId == R.id.logoutCard) {
-            i = new Intent(this, logout.class);
+            i = new Intent(this,MainActivity.class);
+
+
         } else {
             return; // Do nothing if the clicked view does not match any case
         }

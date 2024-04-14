@@ -48,7 +48,7 @@ public class admin extends AppCompatActivity implements View.OnClickListener{
         } else if (viewId == R.id.viewjobCard) {
             i = new Intent(this, ViewjobActivity.class);
         } else if (viewId == R.id.logoutCard) {
-            i = new Intent(this, logout.class);
+            i = new Intent(this, MainActivity.class);
         } else {
             return; // Do nothing if the clicked view does not match any case
         }
