@@ -38,9 +38,9 @@ public class admin extends AppCompatActivity implements View.OnClickListener{
         int viewId = v.getId();
 
         if (viewId == R.id.addstudentCard) {
-            i = new Intent(this, Viewstudent_companyActivity.class);
-        } else if (viewId == R.id.viewstudentCard) {
             i = new Intent(this, ViewStudent.class);
+        } else if (viewId == R.id.viewstudentCard) {
+            i = new Intent(this, Viewstudent_companyActivity.class);
         } else if (viewId == R.id.addcompanyCard) {
             i = new Intent(this, addcompany.class);
         } else if (viewId == R.id.viewcompaniesCard) {
