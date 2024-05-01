@@ -73,17 +73,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TextView
+                    <Button
+                        android:id="@+id/viewprofitName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/viewprofitName"
-                        android:text="View Profile"
-                        android:textSize="17sp"
-                        android:textColor="@color/purple_700"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/viewprofitImage"
                         android:layout_centerHorizontal="true"
-                        android:layout_below="@+id/viewprofitImage"/>
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:minHeight="48dp"
+                        android:text="Response"
+                        android:textColor="#F70606"
+                        android:textSize="16sp" />
 
                     <ImageView
                         android:layout_width="70dp"

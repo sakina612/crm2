@@ -4,29 +4,43 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class company extends AppCompatActivity implements View.OnClickListener{
 
     private CardView card1, card2, card3, card4, card5;
-
+    Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_company);
 
-        card1 = findViewById(R.id.viewprofileCard);
+       // card1 = findViewById(R.id.viewprofileCard);
         card2 = findViewById(R.id.addjobCard);
         card3 = findViewById(R.id.viewjobCard);
         card4 = findViewById(R.id.viewstudentCard);
         card5 = findViewById(R.id.logoutCard);
+        btn= findViewById(R.id.viewprofitName);
 
-        card1.setOnClickListener(this);
+      //  card1.setOnClickListener(this);
         card2.setOnClickListener(this);
         card3.setOnClickListener(this);
         card4.setOnClickListener(this);
         card5.setOnClickListener(this);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoUrl("https://docs.google.com/spreadsheets/d/1d2r4mXVtGKeBXW-_d-tFvxBfI4IFjBc9_Uu4_QPAhXc/edit#gid=1300086076");
+
+            }
+        });
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
 
     @Override
@@ -42,7 +56,7 @@ public class company extends AppCompatActivity implements View.OnClickListener{
         } else if (viewId == R.id.viewjobCard) {
             i = new Intent(this, Viewjob2Activity.class);
         } else if (viewId == R.id.viewstudentCard) {
-            i = new Intent(this, ViewStudent.class);
+            i = new Intent(this, Viewstudent_companyActivity.class);
         } else if (viewId == R.id.logoutCard) {
             i = new Intent(this,MainActivity.class);
 

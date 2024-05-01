@@ -18,9 +18,9 @@ public class admin extends AppCompatActivity implements View.OnClickListener{
 
         card1 = findViewById(R.id.addstudentCard);
         card2 = findViewById(R.id.viewstudentCard);
-        card3 = findViewById(R.id.addcompanyCard);
+        //card3 = findViewById(R.id.addcompanyCard);
         card4 = findViewById(R.id.viewcompaniesCard);
-        card5 = findViewById(R.id.viewjobCard);
+     //   card5 = findViewById(R.id.viewjobCard);
         card6 = findViewById(R.id.logoutCard);
 
         card1.setOnClickListener(this);
@@ -41,8 +41,6 @@ public class admin extends AppCompatActivity implements View.OnClickListener{
             i = new Intent(this, ViewStudent.class);
         } else if (viewId == R.id.viewstudentCard) {
             i = new Intent(this, Viewstudent_companyActivity.class);
-        } else if (viewId == R.id.addcompanyCard) {
-            i = new Intent(this, addcompany.class);
         } else if (viewId == R.id.viewcompaniesCard) {
             i = new Intent(this, Known_StudentActivity.class);
         } else if (viewId == R.id.viewjobCard) {
